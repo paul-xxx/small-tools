@@ -10,7 +10,9 @@ Small Tool by paul-xxx aka BPaul@XDA
 
 2. Using
 ========
+How run? Ctrl+ALT+T . menu.sh
 You can use only one file :(
+
 Kernel
 ------
 

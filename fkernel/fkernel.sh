@@ -33,6 +33,8 @@ then
 	fastboot -i 0x0fce flash boot kernel.elf
 	echo "Kernel flashed!"
 	rm kernel.elf
+	sleep 2
+	fastboot reboot
 	echo "Done! Press ENTER for exit..."
 	read && exit
 fi
@@ -42,6 +44,8 @@ then
 	fastboot -i 0x0fce flash boot kernel.sin
 	echo "Kernel flashed!"
 	rm kernel.sin
+	sleep 2
+	fastboot reboot
 	echo "Done! Press ENTER for exit..."
 	read && exit
 fi
@@ -51,6 +55,8 @@ then
 	fastboot -i 0x0fce flash boot boot.img
 	echo "Kernel flashed!"
 	rm boot.img
+	sleep 2
+	fastboot reboot
 	echo "Done! Press ENTER for exit..."
 	read && exit
 fi

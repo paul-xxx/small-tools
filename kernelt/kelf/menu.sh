@@ -1,7 +1,7 @@
 #!/bin/bash
 cd kelf
 
-version=1.0
+version=1.1
 
 if [ "$?" == "1" ]
 then
@@ -13,7 +13,7 @@ do
   clear
   echo 
   echo "====================================================================="
-  echo " ROM Tools $version - by BPaul (xda-developers.com, sony-developers.ru)"
+  echo " Kernel.ELF Tools $version - by BPaul (xda-developers.com, sony-developers.ru)"
   echo "====================================================================="
   echo
   echo "  1 - Unpack kernel"

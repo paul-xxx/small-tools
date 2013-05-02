@@ -35,6 +35,22 @@ Logo PNG 2 RLE Convertor
 	Grab your rle in initlogo
 
 Logcat logs
-------------------------
+-----------
 
 	Grab your logs in Data/Logs
+
+3. Changelog
+============
+1.1
+
+	Fixed: Permissions fixer
+	Fixed: Moving kernel.sin in work directory
+	Added: dmesg loging
+	Added: Autoreboot after flashing kernel with fastboot
+	Added: Kernel Tools
+	Updated: Names in menu.sh
+	Updated: Digits in menu.sh
+	Moved: kernel.sin unpacker, RSAI Tool, kernel.elf unpacker to Kernel Tools
+
+1.0
+	Initial release

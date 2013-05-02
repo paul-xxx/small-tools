@@ -1,18 +1,19 @@
 #!/bin/bash
 
 echo "Fixing permissions..."
-chmod 755 logcat/*
-chmod 755 kelf/*
-chmod 755 ksin/*
-chmod 755 root/*
-chmod 755 rsai/*
-chmod 755 fkernel/*
-chmod 755 small/*
-chmod 755 cwm/*
-chmod 755 cwm/*
+chmod 755 cwm/cwm.sh
+chmod 755 fkernel/fkernel.sh
+chmod 755 initlogo/convert.sh
+chmod 755 kernelt/menu.sh
+chmod 755 kernelt/rsai/rsai.sh
+chmod 755 kernelt/ksin/ksin.sh
+chmod 755 kernelt/kelf/*.sh
+chmod 755 logs/*.sh
+chmod 755 root/root.sh
+chmod 755 small/*.sh
 echo
 
-version=1.0
+version=1.1
 
 if [ "$?" == "1" ]
 then
@@ -24,22 +25,20 @@ do
   clear
   echo 
   echo "====================================================================="
-  echo " ROM Tools $version - by BPaul (xda-developers.com, sony-developers.ru)"
+  echo " Small Tools $version - by BPaul (xda-developers.com, sony-developers.ru)"
   echo "====================================================================="
   echo
-  echo "  a - Logcat Tools"
-  echo "  b - kernel.elf Tools"
-  echo "  c - kernel.sin Xperia 2011 and X10 unpacker"
-  echo "  d - Flash kernel with fastboot"
-  echo "  e - RSAI Tool"
-  echo "  f - Root your phone"
-  echo "  g - Reboot phone"
-  echo "  h - Sideload ZIP"
-  echo "  i - Copy update.zip to /sdcard"
-  echo "  j - Install CWM on rooted phone"
-  echo "  k - Convert logo.png on inilogo.rle"
+  echo "  1 - Logs Tools"
+  echo "  2 - Kernel Tools"
+  echo "  3 - Flash kernel with fastboot"
+  echo "  4 - Root your phone"
+  echo "  5 - Reboot phone"
+  echo "  6 - Sideload ZIP"
+  echo "  7 - Copy update.zip to /sdcard"
+  echo "  8 - Install CWM on rooted phone"
+  echo "  9 - Convert logo.png on inilogo.rle"
   echo
-  echo "  x - Exit"
+  echo "  Q - Exit"
   echo
   echo -n "Enter option: "
   read opt
@@ -47,18 +46,16 @@ do
   if [ "$?" != "1" ]
   then
     case $opt in
-      a) logcat/menu.sh; continue;;
-      b) kelf/menu.sh; continue;;
-      c) ksin/ksin.sh; continue;;
-      d) fkernel/fkernel.sh; continue;;
-      e) rsai/rsai.sh; continue;;
-      f) root/root.sh; continue;;
-      g) small/reboot.sh; continue;;
-      h) small/sideload.sh; continue;;
-      i) small/update2SD.sh; continue;;
-      j) cwm/cwm.sh; continue;;
-      k) initlogo/convert.sh; continue;;
-      x) exit 1;;
+      1) logs/menu.sh; continue;;
+      2) kernelt/menu.sh; continue;;
+      3) fkernel/fkernel.sh; continue;;
+      4) root/root.sh; continue;;
+      5) small/reboot.sh; continue;;
+      6) small/sideload.sh; continue;;
+      7) small/update2SD.sh; continue;;
+      8) cwm/cwm.sh; continue;;
+      9) initlogo/convert.sh; continue;;
+      q) exit 1;;
       *) echo "Invalid option"; continue;;
     esac
   fi
